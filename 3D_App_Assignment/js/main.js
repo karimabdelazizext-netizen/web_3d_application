@@ -135,7 +135,7 @@ window.loadModel = function(modelName) {
     loader.load(modelPath, function (gltf) {
         model = gltf.scene;
 
-        // Define product details with label colors
+        // Defining product details with label colors
         const productDetails = {
             'standard': {
                 name: 'Midnight Mist',
@@ -275,7 +275,7 @@ renderer.domElement.addEventListener('click', (event) => {
         if (currentTextureMode === 0) {
             // Original label
             applyBottleLabel(model, productName, labelColor);
-            modeLabel = '📌 Original Label';
+            modeLabel = ' Original Label';
         } else if (currentTextureMode === 1) {
             // Holographic use label color and a shifted variant
             const shiftedColor = shiftHue(labelColor, 60);
@@ -284,7 +284,7 @@ renderer.domElement.addEventListener('click', (event) => {
         } else {
             // Minimalist
             newTexture = createMinimalistLabel(productName, labelColor);
-            modeLabel = '⚪ Minimalist Design';
+            modeLabel = ' Minimalist Design';
         }
 
         // Apply new texture to all meshes
@@ -393,7 +393,7 @@ document.getElementById('textureBtn0').addEventListener('click', () => {
     currentTextureMode = 0;
     if (model) {
         applyBottleLabel(model, textureColorMap.productName, currentLabelColor);
-        showTextureNotification('📌 Original Label');
+        showTextureNotification(' Original Label');
     }
 });
 
@@ -422,7 +422,7 @@ document.getElementById('textureBtn2').addEventListener('click', () => {
                 child.material.needsUpdate = true;
             }
         });
-        showTextureNotification('⚪ Minimalist Design');
+        showTextureNotification(' Minimalist Design');
     }
 });
 
@@ -456,23 +456,23 @@ colorPicker.addEventListener('change', (e) => {
     }
 });
 
-// CAMERA PRESET BUTTONS
+// CAMERA BUTTONS
 document.getElementById('camFront').addEventListener('click', () => {
     animateCameraTo(new THREE.Vector3(0, 2, 8));
-    showTextureNotification('📷 Front View');
+    showTextureNotification(' Front View');
 });
 
 document.getElementById('camSide').addEventListener('click', () => {
     animateCameraTo(new THREE.Vector3(8, 2, 0));
-    showTextureNotification('📷 Side View');
+    showTextureNotification(' Side View');
 });
 
 document.getElementById('camTop').addEventListener('click', () => {
     animateCameraTo(new THREE.Vector3(0, 8, 0.1));
-    showTextureNotification('📷 Top View');
+    showTextureNotification(' Top View');
 });
 
 document.getElementById('cam45').addEventListener('click', () => {
     animateCameraTo(new THREE.Vector3(6, 5, 6));
-    showTextureNotification('📷 Isometric View');
+    showTextureNotification(' Isometric View');
 });
