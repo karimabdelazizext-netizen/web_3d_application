@@ -14,8 +14,8 @@ let currentBottleId = 'standard'; // Track current bottle type
 
 const ingredients = {
     standard: { top: 'Bergamot, Lemon', heart: 'Cedar, Amber', base: 'Musk, Sandalwood' },
-    premium:  { top: 'Orange, Neroli', heart: 'Jasmine, Rose', base: 'Vanilla, Patchouli' },
-    luxury:   { top: 'Sea Salt, Aquatic', heart: 'White Tea, Iris', base: 'Driftwood, Ambergris' }
+    premium: { top: 'Orange, Neroli', heart: 'Jasmine, Rose', base: 'Vanilla, Patchouli' },
+    luxury: { top: 'Sea Salt, Aquatic', heart: 'White Tea, Iris', base: 'Driftwood, Ambergris' }
 };
 
 function updateIngredients(bottleId) {
@@ -37,20 +37,20 @@ function animateCameraTo(position, duration = 800) {
         z: camera.position.z
     };
     const startTime = Date.now();
-    
+
     const animate = () => {
         const elapsed = Date.now() - startTime;
         const progress = Math.min(elapsed / duration, 1);
-        
+
         // Smooth easing function
         const easeProgress = progress < 0.5
             ? 2 * progress * progress
             : -1 + (4 - 2 * progress) * progress;
-        
+
         camera.position.x = startPos.x + (position.x - startPos.x) * easeProgress;
         camera.position.y = startPos.y + (position.y - startPos.y) * easeProgress;
         camera.position.z = startPos.z + (position.z - startPos.z) * easeProgress;
-        
+
         if (progress < 1) {
             requestAnimationFrame(animate);
         }
@@ -64,7 +64,7 @@ function init() {
     scene.background = new THREE.Color(0x1a1a1a);
 
     // Camera
-    camera = new THREE.PerspectiveCamera(50, 1, 0.1, 1000); 
+    camera = new THREE.PerspectiveCamera(50, 1, 0.1, 1000);
     camera.position.set(0, 2, 8);
     camera.lookAt(0, 0, 0);
 
@@ -84,18 +84,18 @@ function init() {
     controls.dampingFactor = 0.05;
 
     // Lighting 
-    ambientLight = new THREE.AmbientLight(0xffffff, 1.5); 
+    ambientLight = new THREE.AmbientLight(0xffffff, 1.5);
     scene.add(ambientLight);
 
-    light = new THREE.DirectionalLight(0xffffff, 1.2); 
+    light = new THREE.DirectionalLight(0xffffff, 1.2);
     light.position.set(5, 8, 5);
     scene.add(light);
 
-    fillLight = new THREE.PointLight(0xc9a84c, 2, 50); 
+    fillLight = new THREE.PointLight(0xc9a84c, 2, 50);
     fillLight.position.set(-4, -4, 4);
     scene.add(fillLight);
 
-    const rimLight = new THREE.DirectionalLight(0x4488ff, 1); 
+    const rimLight = new THREE.DirectionalLight(0x4488ff, 1);
     rimLight.position.set(-5, 3, -5);
     scene.add(rimLight);
 
@@ -116,7 +116,7 @@ function animate() {
     renderer.render(scene, camera);
 }
 
-window.loadModel = function(modelName) {
+window.loadModel = function (modelName) {
     if (model) {
         scene.remove(model);
         model.traverse((child) => {
@@ -139,27 +139,27 @@ window.loadModel = function(modelName) {
         const productDetails = {
             'standard': {
                 name: 'Midnight Mist',
-                labelColor: '#1a1a4a' 
+                labelColor: '#1a1a4a'
             },
             'premium': {
                 name: 'Golden Amber',
-                labelColor: '#d4af37' 
+                labelColor: '#d4af37'
             },
             'luxury': {
                 name: 'Azure Bloom',
-                labelColor: '#0066cc' 
+                labelColor: '#0066cc'
             },
             'standard_one': {
                 name: 'Coastal Breeze',
-                labelColor: '#2e8b9e' 
+                labelColor: '#2e8b9e'
             },
             'good_bottle1': {
                 name: 'Urban Noir',
-                labelColor: '#1a1a1a' 
+                labelColor: '#1a1a1a'
             },
             'second_bottle': {
                 name: 'Rose Garden',
-                labelColor: '#c41e3a' 
+                labelColor: '#c41e3a'
             }
         };
 
@@ -174,17 +174,17 @@ window.loadModel = function(modelName) {
         // Store color info for texture cycling
         textureColorMap.productName = details.name;
         textureColorMap.labelColor = details.labelColor;
-        currentLabelColor = details.labelColor; 
-        document.getElementById('labelColorPicker').value = details.labelColor; 
+        currentLabelColor = details.labelColor;
+        document.getElementById('labelColorPicker').value = details.labelColor;
         currentTextureMode = 0;
 
         // Auto-center
-        const box    = new THREE.Box3().setFromObject(model);
+        const box = new THREE.Box3().setFromObject(model);
         const center = box.getCenter(new THREE.Vector3());
-        model.position.sub(center); // cleanest way to center
+        model.position.sub(center);
 
         // Auto-scale so any size model fills the view nicely
-        const size   = box.getSize(new THREE.Vector3());
+        const size = box.getSize(new THREE.Vector3());
         const maxDim = Math.max(size.x, size.y, size.z);
         if (maxDim > 0) model.scale.setScalar(4 / maxDim);
 
@@ -201,20 +201,20 @@ function updateUI(id) {
     const data = {
         'standard': {
             title: 'Midnight Mist',
-            desc:  'A bold, architectural scent with notes of cold slate and cedarwood.'
+            desc: 'A bold, architectural scent with notes of cold slate and cedarwood.'
         },
         'premium': {
             title: 'Golden Amber',
-            desc:  'A warm, classic fragrance featuring honeyed resins and sun-drenched citrus.'
+            desc: 'A warm, classic fragrance featuring honeyed resins and sun-drenched citrus.'
         },
         'luxury': {
             title: 'Azure Bloom',
-            desc:  'An avant-garde scent inspired by coastal flora and crisp sea salt.'
+            desc: 'An avant-garde scent inspired by coastal flora and crisp sea salt.'
         }
     };
     const product = data[id] || data['standard'];
     document.getElementById('product-title').innerText = product.title;
-    document.getElementById('product-desc').innerText  = product.desc;
+    document.getElementById('product-desc').innerText = product.desc;
 }
 
 window.addEventListener('resize', () => {
@@ -265,7 +265,7 @@ renderer.domElement.addEventListener('click', (event) => {
 
     if (intersects.length > 0) {
         currentTextureMode = (currentTextureMode + 1) % 3;
-        
+
         const productName = textureColorMap.productName;
         const labelColor = textureColorMap.labelColor;
 
@@ -323,7 +323,7 @@ function shiftHue(hex, degrees) {
     } else {
         const d = max - min;
         s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
-        switch(max) {
+        switch (max) {
             case r: h = ((g - b) / d + (g < b ? 6 : 0)) / 6; break;
             case g: h = ((b - r) / d + 2) / 6; break;
             case b: h = ((r - g) / d + 4) / 6; break;
@@ -335,21 +335,20 @@ function shiftHue(hex, degrees) {
     const hue2rgb = (p, q, t) => {
         if (t < 0) t += 1;
         if (t > 1) t -= 1;
-        if (t < 1/6) return p + (q - p) * 6 * t;
-        if (t < 1/2) return q;
-        if (t < 2/3) return p + (q - p) * (2/3 - t) * 6;
+        if (t < 1 / 6) return p + (q - p) * 6 * t;
+        if (t < 1 / 2) return q;
+        if (t < 2 / 3) return p + (q - p) * (2 / 3 - t) * 6;
         return p;
     };
     const q2 = l < 0.5 ? l * (1 + s) : l + s - l * s;
     const p2 = 2 * l - q2;
-    const rr = Math.round(hue2rgb(p2, q2, h + 1/3) * 255);
+    const rr = Math.round(hue2rgb(p2, q2, h + 1 / 3) * 255);
     const gg = Math.round(hue2rgb(p2, q2, h) * 255);
-    const bb = Math.round(hue2rgb(p2, q2, h - 1/3) * 255);
+    const bb = Math.round(hue2rgb(p2, q2, h - 1 / 3) * 255);
     return '#' + [rr, gg, bb].map(x => x.toString(16).padStart(2, '0')).join('');
 }
 
 /**
- * Show temporary notification when texture changes
  * @param {string} message - Notification message
  */
 function showTextureNotification(message) {
@@ -374,7 +373,7 @@ function showTextureNotification(message) {
     }
     notification.textContent = message;
     notification.style.opacity = '1';
-    
+
     if (notification.timeoutId) clearTimeout(notification.timeoutId);
     notification.timeoutId = setTimeout(() => {
         notification.style.opacity = '0';

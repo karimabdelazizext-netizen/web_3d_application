@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body style="background-color: #1a1a1a;">
 
     <nav class="navbar navbar-dark bg-dark">
@@ -22,7 +24,9 @@
                     <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://github.com/karimabdelazizext-netizen/web_3d_application/tree/main/3D_App_Assignment" target="_blank">GitHub</a>
+                    <a class="nav-link"
+                        href="https://github.com/karimabdelazizext-netizen/web_3d_application/tree/main/3D_App_Assignment"
+                        target="_blank">GitHub</a>
                 </li>
             </ul>
         </div>
@@ -35,60 +39,152 @@
 
                 <section class="mb-5">
                     <h2>Design </h2>
-                    <p>I, Karim Ayman, declare that this 3D Web Application is my own work. I have utilized the Three.js library and Bootstrap 5 framework to build the web application. All 3D models were created by me in Blender 4.0, specifically designed as a 'Perfume Collection' to demonstrate geometric variety (Cube, Cylinder, and Sphere primitives) while maintaining a consistent brand identity.</p>
+                    <p>I, Karim Ayman, declare that this 3D Web Application is my own work. I have utilized the Three.js
+                        library and Bootstrap 5 framework to build the web application. All 3D models were created by me
+                        in Blender 4.0, specifically designed as a 'Perfume Collection' to demonstrate geometric variety
+                        (Cube, Cylinder, and Sphere primitives) while maintaining a consistent brand identity.</p>
                 </section>
 
                 <section class="mb-5">
 
                     <h3>Integration of 3D Models</h3>
-                    <p> I developed a premium perfume line. I utilized Shade Smooth and Subdivision Surface modifiers to ensure a high-end glass appearance, while keeping the poly-count low for efficient web performance.</p>
+                    <p> I developed a premium perfume line. I utilized Shade Smooth and Subdivision Surface modifiers to
+                        ensure a high-end glass appearance, while keeping the poly-count low for efficient web
+                        performance.</p>
 
                     <h3>Interaction Design</h3>
-                    <p>The app follows a the MVC pattern. I created a dynamic loadModel function that removes any  old geometries and materials from the GPU memory before loading new ones to prevent memory leaks.</p>
+                    <p>The app follows a the MVC pattern. I created a dynamic loadModel function that removes any old
+                        geometries and materials from the GPU memory before loading new ones to prevent memory leaks.
+                    </p>
 
                     <h3>Implementation Details</h3>
-                    <p>I integrated OrbitControls to allow users to interact with my products from any angle. I also included a Wireframe Toggle to show the underlying geometry, satisfying the 'Content Swapping' requirement.</p>
+                    <p>I integrated OrbitControls to allow users to interact with my products from any angle. I also
+                        included a Wireframe Toggle to show the underlying geometry, satisfying the 'Content Swapping'
+                        requirement.</p>
                 </section>
 
                 <section class="mb-5">
                     <h2>Implementation and Publication</h2>
-                    <p>The application uses a Fluid Grid Layout (Bootstrap 5) to ensure it is fully responsive across mobile, tablet, and desktop views.</p>
-                    <p>High-contrast UI elements and semantic HTML tags were used to improve readability and screen-reader compatibility.</p>
+                    <p>The application uses a Fluid Grid Layout (Bootstrap 5) to ensure it is fully responsive across
+                        mobile, tablet, and desktop views.</p>
+                    <p>High-contrast UI elements and semantic HTML tags were used to improve readability and
+                        screen-reader compatibility.</p>
+                    <p><strong>Live Deployment:</strong> The application is deployed and accessible at <a
+                            href="http://users.sussex.ac.uk/~ki202/3D_App_Assignment/"
+                            target="_blank">http://users.sussex.ac.uk/~ki202/3D_App_Assignment/</a></p>
+                    <p><strong>GitHub Repository:</strong> The source code is available at <a
+                            href="https://github.com/karimabdelazizext-netizen/web_3d_application/tree/main/3D_App_Assignment"
+                            target="_blank">https://github.com/karimabdelazizext-netizen/web_3d_application/tree/main/3D_App_Assignment</a>
+                    </p>
                 </section>
 
                 <section class="mb-5">
-                  <h2>Testing</h2>
-                  <table class="table table-bordered">
-                    <thead><tr><th>Test</th><th>Expected</th><th>Result</th><th>Browser used </th></tr></thead>
-                    <tbody>
-                      <tr><td>Load standard bottle</td><td>Model appears centred</td><td> Pass</td><td>Chrome </td></tr>
-                      <tr><td>Wireframe toggle</td><td>Mesh edges visible</td><td> Pass</td><td>Chrome</td></tr>
-                      <tr><td>Click bottle to texture cycle</td><td>Label changes style</td><td> Pass</td><td>Chrome </td></tr>
-                      <tr><td>Responsive layout mobile</td><td>Columns stack</td><td> Pass</td><td>iPhone Safari</td></tr>
-                      <tr><td>Camera preset — Top view</td><td>Camera moves smoothly</td><td> Pass</td><td>Chrome</td></tr>
-                    </tbody>
-                  </table>
+                    <h2>Testing</h2>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Test</th>
+                                <th>Expected</th>
+                                <th>Result</th>
+                                <th>Browser used </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Load standard bottle</td>
+                                <td>Model appears centred</td>
+                                <td> Pass</td>
+                                <td>Chrome </td>
+                            </tr>
+                            <tr>
+                                <td>Wireframe toggle</td>
+                                <td>Mesh edges visible</td>
+                                <td> Pass</td>
+                                <td>Chrome</td>
+                            </tr>
+                            <tr>
+                                <td>Click bottle to texture cycle</td>
+                                <td>Label changes style</td>
+                                <td> Pass</td>
+                                <td>Chrome </td>
+                            </tr>
+                            <tr>
+                                <td>Responsive layout mobile</td>
+                                <td>Columns stack</td>
+                                <td> Pass</td>
+                                <td>iPhone Safari</td>
+                            </tr>
+                            <tr>
+                                <td>Camera preset — Top view</td>
+                                <td>Camera moves smoothly</td>
+                                <td> Pass</td>
+                                <td>Chrome</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </section>
 
                 <section class="mb-5">
                     <h2>Deeper understanding</h2>
-                    <p><strong>UV Mapping and Texture Mapping:</strong> UV coordinates are a 2D coordinate system used to map 2D textures onto 3D geometry. Unlike 3D XYZ coordinates, UV represents 2D texture space (U = horizontal, V = vertical). This application dynamically generates bottle labels using HTML Canvas and applies them to bottle meshes via UV mapping. Each bottle model is assumed to have pre-existing UV coordinates from the Blender export; the texture loader checks for these coordinates and applies a custom-generated label texture (created with product name, branding, and gradient backgrounds) to the color map of the material.</p>
-                    <p><strong>Material Properties in Three.js:</strong> I used MeshStandardMaterial which supports physically-based rendering. The textures are combined with metalness (0.2) and roughness (0.1) properties to create a premium glass appearance. The transparency property is set to true with opacity at 0.95, allowing for subtle light refraction effects that make the bottles appear more realistic.</p>
-                    <p><strong>Canvas Texture Generation:</strong> Rather than pre-rendering texture files, my application generates labels dynamically using the HTML5 Canvas API. This approach offers several advantages: reduced file size (no separate image assets), dynamic text rendering (product names can be modified at runtime), and seamless integration with Three.js's CanvasTexture class. The canvas texture is rendered at 512x512 resolution with proper filtering to maintain quality when viewed from various angles.</p>
-                    <p><strong>Memory Management:</strong> The model loading process includes proper resource disposal. Before loading a new model, the old model's geometry and materials are removed from GPU memory using Three.js's dispose() method. This prevents memory leaks common in WebGL applications where textures and geometries can accumulate if not properly cleaned up.</p>
+                    <p><strong>UV Mapping and Texture Mapping:</strong> UV coordinates are a 2D coordinate system used
+                        to map 2D textures onto 3D geometry. Unlike 3D XYZ coordinates, UV represents 2D texture space
+                        (U = horizontal, V = vertical). This application dynamically generates bottle labels using HTML
+                        Canvas and applies them to bottle meshes via UV mapping. Each bottle model is assumed to have
+                        pre-existing UV coordinates from the Blender export; the texture loader checks for these
+                        coordinates and applies a custom-generated label texture (created with product name, branding,
+                        and gradient backgrounds) to the color map of the material.</p>
+                    <p><strong>Material Properties in Three.js:</strong> I used MeshStandardMaterial which supports
+                        physically-based rendering. The textures are combined with metalness (0.2) and roughness (0.1)
+                        properties to create a premium glass appearance. The transparency property is set to true with
+                        opacity at 0.95, allowing for subtle light refraction effects that make the bottles appear more
+                        realistic.</p>
+                    <p><strong>Canvas Texture Generation:</strong> Rather than pre-rendering texture files, my
+                        application generates labels dynamically using the HTML5 Canvas API. This approach offers
+                        several advantages: reduced file size (no separate image assets), dynamic text rendering
+                        (product names can be modified at runtime), and seamless integration with Three.js's
+                        CanvasTexture class. The canvas texture is rendered at 512x512 resolution with proper filtering
+                        to maintain quality when viewed from various angles.</p>
+                    <p><strong>Memory Management:</strong> The model loading process includes proper resource disposal.
+                        Before loading a new model, the old model's geometry and materials are removed from GPU memory
+                        using Three.js's dispose() method. This prevents memory leaks common in WebGL applications where
+                        textures and geometries can accumulate if not properly cleaned up.</p>
 
                     <h3 class="mt-4">Advanced Interactive Features</h3>
-                    <p><strong>Texture Mode Switching:</strong> my application implements three different texture generation modes accessible via UI buttons. The 'Original' mode displays standard gradient labels with branding text. The 'Holographic' mode creates diagonal gradient effects with metallic yellow accents and "LIMITED EDITION" branding. The 'Minimalist' mode generates clean white backgrounds with serif typography and subtle borders. Each mode is dynamically generated via Canvas, allowing instant switching without pre-loaded assets.</p>
-                    <p><strong>Real-Time Color Customization:</strong> Users can select any color using the HTML5 color picker, and the application recalculates and reapplies the texture in real-time. The color update maintains the current texture mode (Original, Holographic, or Minimalist), updating only the material's texture map without requiring geometry re-computation.</p>
-                    <p><strong>Camera Preset System:</strong> The camera system uses eased animation to smoothly transition between preset viewpoints (Front, Side, Top, Isometric). This is implemented using requestAnimationFrame and a quadratic easing function for smooth, professional transitions. Preset positions are hard-coded camera vectors that provide optimal viewing angles for product inspection.</p>
-                    <p><strong>Scene Lighting Architecture:</strong> The scene uses a multi-light setup: 1) Ambient Light (0xffffff, intensity 1.5) for overall scene illumination, 2) Directional Light (0xffffff, intensity 1.2) from upper-right for main shading, 3) Gold Fill Light (0xc9a84c) positioned below for warm rim lighting, and 4) Blue Rim Light (0x4488ff) from behind for atmospheric depth. This setup creates a professional studio environment similar to high-end product photography.</p>
-                    <p><strong>OrbitControls Implementation:</strong> The application integrates Three.js OrbitControls to allow users to rotate, zoom, and pan around models. Damping is enabled (dampingFactor: 0.05) for smooth, inertia-based interaction. This control system works seamlessly with the camera preset system—presets set the camera position while OrbitControls manage user interaction.</p>
+                    <p><strong>Texture Mode Switching:</strong> my application implements three different texture
+                        generation modes accessible via UI buttons. The 'Original' mode displays standard gradient
+                        labels with branding text. The 'Holographic' mode creates diagonal gradient effects with
+                        metallic yellow accents and "LIMITED EDITION" branding. The 'Minimalist' mode generates clean
+                        white backgrounds with serif typography and subtle borders. Each mode is dynamically generated
+                        via Canvas, allowing instant switching without pre-loaded assets.</p>
+                    <p><strong>Real-Time Color Customization:</strong> Users can select any color using the HTML5 color
+                        picker, and the application recalculates and reapplies the texture in real-time. The color
+                        update maintains the current texture mode (Original, Holographic, or Minimalist), updating only
+                        the material's texture map without requiring geometry re-computation.</p>
+                    <p><strong>Camera Preset System:</strong> The camera system uses eased animation to smoothly
+                        transition between preset viewpoints (Front, Side, Top, Isometric). This is implemented using
+                        requestAnimationFrame and a quadratic easing function for smooth, professional transitions.
+                        Preset positions are hard-coded camera vectors that provide optimal viewing angles for product
+                        inspection.</p>
+                    <p><strong>Scene Lighting Architecture:</strong> The scene uses a multi-light setup: 1) Ambient
+                        Light (0xffffff, intensity 1.5) for overall scene illumination, 2) Directional Light (0xffffff,
+                        intensity 1.2) from upper-right for main shading, 3) Gold Fill Light (0xc9a84c) positioned below
+                        for warm rim lighting, and 4) Blue Rim Light (0x4488ff) from behind for atmospheric depth. This
+                        setup creates a professional studio environment similar to high-end product photography.</p>
+                    <p><strong>OrbitControls Implementation:</strong> The application integrates Three.js OrbitControls
+                        to allow users to rotate, zoom, and pan around models. Damping is enabled (dampingFactor: 0.05)
+                        for smooth, inertia-based interaction. This control system works seamlessly with the camera
+                        preset system—presets set the camera position while OrbitControls manage user interaction.</p>
                 </section>
 
-                 <section class="mb-5">
+                <section class="mb-5">
                     <h2>Generated AI Usage</h2>
-                    <p><strong>GitHub Copilot:</strong> Assisted in proposing the textureLoader.js module which helped me and  provided some autocomplete suggestions for Canvas API methods which were important for my apllication. Copilot also suggested the gradient implementation for the label background and the proper texture filter settings for optimal rendering quality.</p>
-                    <p><strong>Code Structure and Debugging:</strong> helped making the codebase more maintainable and testable. AI assistance also identified potential issues such as missing UV coordinate validation and the importance of calling dispose() to prevent memory leaks.</p>
+                    <p><strong>GitHub Copilot:</strong> Assisted in proposing the textureLoader.js module which helped
+                        me and provided some autocomplete suggestions for Canvas API methods which were important for my
+                        apllication. Copilot also suggested the gradient implementation for the label background and the
+                        proper texture filter settings for optimal rendering quality.</p>
+                    <p><strong>Code Structure and Debugging:</strong> helped making the codebase more maintainable and
+                        testable. AI assistance also identified potential issues such as missing UV coordinate
+                        validation and the importance of calling dispose() to prevent memory leaks.</p>
                 </section>
                 <table class="table table-bordered">
                     <thead>
@@ -102,7 +198,7 @@
                         <tr>
                             <td>ChatGPT</td>
                             <td>Code debugging and optimization</td>
-                            <td>Improved code efficiency and readability</td>       
+                            <td>Improved code efficiency and readability</td>
                         </tr>
                         <tr>
                             <td>DALL-E</td>
@@ -113,33 +209,36 @@
                 </table>
 
                 <section class="mb-5">
-                  <h2>References</h2>
-                  <ul>
-                    <li>Three.js — <a href="https://threejs.org">threejs.org</a></li>
-                    <li>Bootstrap 5 — <a href="https://getbootstrap.com">getbootstrap.com</a></li>
-                    <li>GLTFLoader — Three.js documentation</li>
-                    <li>OrbitControls — Three.js examples</li>
-                    <li>Google Fonts — Playfair Display, Jost</li>
-                  </ul>
+                    <h2>References</h2>
+                    <ul>
+                        <li>Three.js — <a href="https://threejs.org">threejs.org</a></li>
+                        <li>Bootstrap 5 — <a href="https://getbootstrap.com">getbootstrap.com</a></li>
+                        <li>GLTFLoader — Three.js documentation</li>
+                        <li>OrbitControls — Three.js examples</li>
+                        <li>Google Fonts — Playfair Display, Jost</li>
+                    </ul>
                 </section>
 
                 <section class="mb-5">
-                  <h2>Site Map</h2>
-                  <ul>
-                    <li><strong>index.html</strong> — Main 3D viewer with model selection, texture controls, camera presets</li>
-                    <li><strong>about.html</strong> — Project documentation, design decisions, AI usage, testing</li>
-                    <li><strong>css/style.css</strong> — All styling, CSS variables, luxury dark theme</li>
-                    <li><strong>js/main.js</strong> — Three.js scene, model loading, interactions</li>
-                    <li><strong>js/textureLoader.js</strong> — Canvas texture generation module</li>
-                    <li><strong>models/</strong> — standard.glb, premium.glb, luxury.glb</li>
-                    <li><strong>blender_files/</strong> — Untitled.blend, Untitled2.blend</li>
-                  </ul>
+                    <h2>Site Map</h2>
+                    <ul>
+                        <li><strong>index.html</strong> — Main 3D viewer with model selection, texture controls, camera
+                            presets</li>
+                        <li><strong>about.html</strong> — Project documentation, design decisions, AI usage, testing
+                        </li>
+                        <li><strong>css/style.css</strong> — All styling, CSS variables, luxury dark theme</li>
+                        <li><strong>js/main.js</strong> — Three.js scene, model loading, interactions</li>
+                        <li><strong>js/textureLoader.js</strong> — Canvas texture generation module</li>
+                        <li><strong>models/</strong> — standard.glb, premium.glb, luxury.glb</li>
+                        <li><strong>blender_files/</strong> — Untitled.blend, Untitled2.blend</li>
+                    </ul>
                 </section>
             </div>
         </div>
-    </div>  
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
